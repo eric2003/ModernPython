@@ -1,0 +1,2 @@
+from say import *
+hello()
