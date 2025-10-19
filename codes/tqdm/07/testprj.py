@@ -1,0 +1,7 @@
+from tqdm import tqdm
+from time import sleep
+ 
+ 
+for i in tqdm(range(0, 100), unit =" ticks",
+              desc ="Text You Want"):
+    sleep(.1)

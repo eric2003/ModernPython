@@ -1,0 +1,18 @@
+//
+// This code is generated, do not edit by hand.
+//
+#include "{{ message.name }}.h"
+
+//
+// Constructor
+//
+{{ message.name }}::{{ message.name }}(
+    {% for field in message.fields %}
+    {{ field.type }} {{ field.name }}{{"" if loop.last else "," }}
+    {% endfor %}
+) :
+    {% for field in message.fields %}
+    {{ field.name }}({{ field.name}}){{"" if loop.last else "," }}
+    {% endfor %}
+{
+};

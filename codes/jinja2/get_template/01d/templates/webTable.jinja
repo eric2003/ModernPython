@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Table of {{tableOf}}</title></head>
+    <body>
+        <h2>Table of {{tableOf}} rendered with Jinja -</h2>
+        {% for i in range(1,11) -%}
+        <p>{{tableOf}} x {{i}} = {{tableOf * i}}</p>
+        {%- endfor %}
+    </body>
+</html>

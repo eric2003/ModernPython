@@ -1,0 +1,39 @@
+//
+// This code is generated. Do not edit by hand.
+//
+#pragma once
+
+#include <cstdint>
+#include <vector>
+#include <string>
+
+class {{ message.name }}
+{
+public:
+    {{ message.name }}(
+        {% for field in message.fields %}
+        {{ field.type }} {{ field.name }}{{"" if loop.last else "," }}
+        {% endfor %}
+    );
+    ~{{ message.name }}() = default;
+
+    {% for field in message.fields %}
+    {% if field.type == 'TimeZone' %}
+    enum {{ field.name }} class : std::uint8_t
+    {
+    {% for enum in field.enumValues %}
+        {{ enum.name }} = {{ enum.value }}{{ "" if loop.last else "," }}
+    {% endfor %}
+    }
+    {% endif %}
+    {% endfor %}
+
+    // Put public accessor functions here
+
+private:
+    {% for field in message.fields %}
+
+    {{ field.type }} {{ field.name }} = {{ field.default }}; // {{ field.description }}
+
+    {% endfor %}
+};

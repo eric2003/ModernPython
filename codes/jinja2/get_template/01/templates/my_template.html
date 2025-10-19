@@ -1,0 +1,19 @@
+<!DOCTYPE html>  
+<html lang="zh">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>欢迎页面</title>  
+</head>  
+<body>  
+    <h1>欢迎，{{ name }}!</h1>  
+    <p>你今年 {{ age }} 岁。</p>  
+
+    <h2>爱好</h2>  
+    <ul>  
+        {% for hobby in hobbies %}  
+            <li>{{ hobby }}</li>  
+        {% endfor %}  
+    </ul>  
+</body>  
+</html>  

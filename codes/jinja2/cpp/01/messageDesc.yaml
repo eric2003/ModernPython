@@ -1,0 +1,32 @@
+Message:
+  name: MessageXYZ
+  fields:
+    - name: field1
+      type: int
+      default: 0
+      description: "An integer field"
+    - name: field2
+      type: float
+      default: 0.0
+      description: "A float field"
+    - name: field3
+      type: std::string
+      default: "\"\""
+      description: "A string field"
+    - name: TimeTag
+      type: double
+      default: 0.0
+      description: "UTC Time Tag"
+    - name: timeZone
+      type: TimeZone
+      default: TimeZone::EST
+      description: "Enum for representing time zones"
+      enumValues:
+        - name: EST
+          value: 1
+        - name: CST
+          value: 2
+        - name: MST
+          value: 3
+        - name: PST
+          value: 4

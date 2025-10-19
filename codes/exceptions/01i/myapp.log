@@ -1,0 +1,6 @@
+ERROR:root:invalid literal for int() with base 10: 'hello'
+Traceback (most recent call last):
+  File "D:\work\python_work\ModernPython\codes\exceptions\01i\testprj.py", line 9, in <module>
+    print( 10 / int(value) )
+                ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'hello'

@@ -1,0 +1,1 @@
+py.exe ./testprj.py d:\work\python_work\ModernPython\codes
